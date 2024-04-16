@@ -1,1 +1,5 @@
 export * from './Home'
+export * from './About'
+export * from './Categorias'
+export * from './Comentarios'
+export * from './Localizacao'
