@@ -13,8 +13,9 @@ export const TabRoutes = () => {
                 tabBarStyle: {
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: 100
+                    height: 100,
                 },
+                tabBarActiveTintColor: 'red',
             }}
         >
             <Tab.Screen

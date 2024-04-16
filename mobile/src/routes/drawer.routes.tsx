@@ -9,9 +9,9 @@ export default function DrawerRoutes() {
     return (
         <Drawer.Navigator
             screenOptions={{
-                title: 'Blume-Capel Model APP',
+                title: 'Aracaju Carros',
                 drawerStyle: {
-                    backgroundColor: '#fff'
+                    backgroundColor: '#fff',
                 },
                 headerStyle: {
                     backgroundColor: '#FFFFFF',

@@ -1,20 +1,18 @@
-import { View, Text } from "react-native";
-import { styles } from "./styles";
+import React from "react";
+import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { useAracajuCarrosContext } from "../../context";
-
-
+import { styles } from "./styles";
 
 export const Home = () => {
+  const { carros } = useAracajuCarrosContext();
 
-    const { carros } = useAracajuCarrosContext();
-
-    return (
-        <View style={styles.view}>
-            {carros.map((item) => (
-                <View key={item.id}>
-                    <Text>{item.marca}</Text>
-                </View>
-            ))}
-        </View>
-    );
-}
+  return (
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../../assets/images/carro.png")}
+        style={styles.imageBackground}
+      >
+      </ImageBackground>
+    </View>
+  );
+};
