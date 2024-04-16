@@ -11,4 +11,10 @@ export interface ICarros {
     imagem2: string;
     imagem3: string;
     imagem4: string;
+    tipo: string;
+}
+
+export interface IModelos {
+    id: number;
+    modelo: string;
 }

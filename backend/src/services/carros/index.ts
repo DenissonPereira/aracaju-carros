@@ -17,8 +17,12 @@ export async function serviceCarros() {
         carros.imagem1 AS imagem1,
         carros.imagem2 AS imagem2,
         carros.imagem3 AS imagem3,
-        carros.imagem4 AS imagem4
-      FROM carros
+        carros.imagem4 AS imagem4,
+        carros.tipo AS tipo
+      FROM
+        carros
+      JOIN
+        modelos ON modelos.id = carros.tipo;
       `
     );
     //@ts-ignore
