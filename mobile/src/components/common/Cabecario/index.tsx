@@ -12,7 +12,7 @@ export const Cabecario = () => {
 
     const { modelos, carros } = useAracajuCarrosContext();
     const [selectedItem, setSelectedItem] = useState<IModelos | null>(null);
-    const [numero, setNumero] = useState<number>();
+    const [numero, setNumero] = useState<number>(1);
 
     const carrosPasseio = carros.filter((carro) => carro.tipo == `${numero}`);
 
