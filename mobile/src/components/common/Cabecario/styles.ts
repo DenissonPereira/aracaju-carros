@@ -42,5 +42,11 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    textModelo: {
+        textAlign: 'center',
+        fontSize: 20,
+        color: 'red',
+        fontWeight: '500'
     }
 });

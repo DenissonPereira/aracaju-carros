@@ -50,7 +50,7 @@ export const Cabecario = () => {
                                 key={car.id} 
                                 onPress={() => navigate(`${car.id}`)}
                             >
-                                <Text>* {car.modelo}</Text>
+                                <Text style={styles.textModelo}>{car.marca} {car.modelo}</Text>
                                 <Image source={{ uri: car.imagem1 }} style={styles.imagemCarro} />
                             </TouchableOpacity>
                         ))}
