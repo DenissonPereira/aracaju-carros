@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import StackRoutes from './stack.routes';
-import { Feather, FontAwesome, MaterialIcons, FontAwesome5 } from '@expo/vector-icons'
-import { About, Categorias, Comentarios, Localizacao } from '../screens';
+import { Feather, MaterialIcons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
+import { About, Categorias, Marcas, Servicos } from '../screens';
 import { View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
@@ -29,10 +29,10 @@ export const TabRoutes = () => {
             />
 
             <Tab.Screen 
-                name='comentariosTab'
-                component={Comentarios}
+                name='servicosTab'
+                component={Servicos}
                 options={{
-                    tabBarIcon: ({ color, size }) => <FontAwesome name='comments' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='shield-car' color={color} size={size} />
                 }}
             />
             
@@ -54,10 +54,10 @@ export const TabRoutes = () => {
             />
 
             <Tab.Screen 
-                name='localizacaoTab'
-                component={Localizacao}
+                name='marcasTab'
+                component={Marcas}
                 options={{
-                    tabBarIcon: ({ color, size }) => <FontAwesome5 name='map-marked-alt' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <MaterialIcons name='directions-car' color={color} size={size} />
                 }}
             />
             
