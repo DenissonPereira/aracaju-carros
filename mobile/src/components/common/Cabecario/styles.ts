@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
         borderBottomColor: 'red',
     },
     imagemCarro: {
-        width: 200,
+        width: 250,
         height: 150,
         resizeMode: 'cover',
         marginBottom: 10,

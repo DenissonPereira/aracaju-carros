@@ -3,9 +3,12 @@ import { styles } from "./styles"
 import { useAracajuCarrosContext } from "../../../context"
 import { useState } from "react";
 import { IModelos } from "../../../model";
+import { useRoutes } from "../../../hooks/useRoutes";
 
 
 export const Cabecario = () => {
+
+    const { navigate } = useRoutes();
 
     const { modelos, carros } = useAracajuCarrosContext();
     const [selectedItem, setSelectedItem] = useState<IModelos | null>(null);
@@ -43,10 +46,13 @@ export const Cabecario = () => {
                 <ScrollView>
                     <View style={styles.carros}>
                         {carrosPasseio.map((car) => (
-                            <View key={car.id}>
-                                <Text>{car.modelo}</Text>
+                            <TouchableOpacity 
+                                key={car.id} 
+                                onPress={() => navigate(`${car.id}`)}
+                            >
+                                <Text>* {car.modelo}</Text>
                                 <Image source={{ uri: car.imagem1 }} style={styles.imagemCarro} />
-                            </View>
+                            </TouchableOpacity>
                         ))}
                     </View>
                 </ScrollView>
