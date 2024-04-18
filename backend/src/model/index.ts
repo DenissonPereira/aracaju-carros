@@ -18,3 +18,16 @@ export interface IModelos {
     id: number;
     modelo: string;
 }
+
+export interface IUsuario {
+    id: number;
+    contato: number;
+    tipo: string;
+    nome: string;
+    sobrenome: string;
+    cpf: string;
+    endereco: string;
+    email: string;
+    senha: string;
+    foto: string;
+}
