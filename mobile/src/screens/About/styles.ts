@@ -5,5 +5,10 @@ export const styles = StyleSheet.create({
     safe: {
         flex: 1,
         height: Dimensions.get("window").height,
+    },
+    view: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

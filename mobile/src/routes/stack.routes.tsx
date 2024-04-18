@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack"
 import { CorollaCross, CorollaGLi, CorollaHybrid, GRCorolla, HilluxGR, HilluxSTD, Home, RAV4, SW4SRX, Yaris } from "../screens";
+import { Login } from "../screens/Login";
 
 
 
@@ -17,84 +18,92 @@ export default function StackRoutes() {
             <Stack.Screen
                 name="1"
                 component={CorollaGLi}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Corolla GLi' 
+                    headerTitle: 'Toyota Corolla GLi'
                 }}
             />
 
             <Stack.Screen
                 name="2"
                 component={HilluxSTD}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Hillux STD' 
+                    headerTitle: 'Toyota Hillux STD'
                 }}
             />
 
             <Stack.Screen
                 name="3"
                 component={SW4SRX}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota SW4 SRX' 
+                    headerTitle: 'Toyota SW4 SRX'
                 }}
             />
 
             <Stack.Screen
                 name="4"
                 component={Yaris}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Yaris' 
+                    headerTitle: 'Toyota Yaris'
                 }}
             />
 
             <Stack.Screen
                 name="5"
                 component={CorollaCross}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Corolla Cross' 
+                    headerTitle: 'Toyota Corolla Cross'
                 }}
             />
 
             <Stack.Screen
                 name="6"
                 component={GRCorolla}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Corolla GR' 
+                    headerTitle: 'Toyota Corolla GR'
                 }}
             />
 
             <Stack.Screen
                 name="7"
                 component={HilluxGR}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Hillux GR' 
+                    headerTitle: 'Toyota Hillux GR'
                 }}
             />
 
             <Stack.Screen
                 name="8"
                 component={CorollaHybrid}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota Corolla Hybrid' 
+                    headerTitle: 'Toyota Corolla Hybrid'
                 }}
             />
 
             <Stack.Screen
                 name="9"
                 component={RAV4}
-                options={{ 
+                options={{
                     headerShown: true,
-                    headerTitle: 'Toyota RAV4' 
+                    headerTitle: 'Toyota RAV4'
                 }}
             />
 
+            <Stack.Screen
+                name="login"
+                component={Login}
+                options={{
+                    headerShown: true,
+                    headerTitle: 'Toyota RAV4'
+                }}
+            />
         </Stack.Navigator>
     )
 }
