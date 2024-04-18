@@ -4,8 +4,9 @@ import { logout } from "../../services/logout"
 import { useRoutes } from "../../hooks/useRoutes";
 import { useAracajuCarrosContext } from "../../context"; 
 import { IUsuario } from "../../model";
+import { Perfil } from "../../components";
 
-export const About = () => {
+export const Menu = () => {
     const { navigate } = useRoutes(); 
     const { setUsuario } = useAracajuCarrosContext(); 
 
@@ -21,9 +22,12 @@ export const About = () => {
             source={require('../../assets/images/sobre.png')}
         >
             <View style={styles.view}>
-                <TouchableOpacity onPress={handleSair}>
-                    <Text>Sair</Text>
-                </TouchableOpacity>
+                <Perfil />
+                <View style={styles.viewBotao}>
+                    <TouchableOpacity onPress={handleSair} style={styles.botao}>
+                        <Text style={styles.textBotao}>Sair</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </ImageBackground>
     )

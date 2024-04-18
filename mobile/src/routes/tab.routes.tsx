@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import StackRoutes from './stack.routes';
-import { Feather, MaterialIcons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
-import { About, Categorias, Marcas, Servicos } from '../screens';
+import { Feather, MaterialIcons, Entypo, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Categorias, Marcas, Menu, Servicos } from '../screens';
 import { View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
@@ -62,10 +62,10 @@ export const TabRoutes = () => {
             />
             
             <Tab.Screen 
-                name='aboutTab'
-                component={About}
+                name='menuTab'
+                component={Menu}
                 options={{
-                    tabBarIcon: ({ color, size }) => <Feather name='help-circle' color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => <Entypo name='menu' color={color} size={size} />
                 }}
             />
 

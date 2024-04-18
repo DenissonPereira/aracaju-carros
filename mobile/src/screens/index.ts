@@ -1,5 +1,5 @@
 export * from './Home'
-export * from './About'
+export * from './Menu'
 export * from './Categorias'
 export * from './Servicos'
 export * from './Marcas'
