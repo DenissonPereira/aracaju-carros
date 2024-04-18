@@ -31,3 +31,10 @@ export interface IUsuario {
     senha: string;
     foto: string;
 }
+
+export interface IMarcas {
+    id: number;
+    nome: string;
+    quantidade: string;
+    imagem: string;
+}
