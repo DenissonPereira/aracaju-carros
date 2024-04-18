@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { ICarros, IModelos, IUsuario } from "../model"
+import { ICarros, IMarcas, IModelos, IUsuario } from "../model"
 import { loadCarros } from "../services/carrosService";
 import { loadModelos } from "../services/modelosService";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { loadMarcas } from "../services/marcasService";
 
 
 type CarroProps = {
@@ -12,6 +13,8 @@ type CarroProps = {
     setModelos(modelos: IModelos[]): void;
     usuario: IUsuario;
     setUsuario(usuario: IUsuario): void;
+    marcas: IMarcas[];
+    setMarcas(marcas: IMarcas[]): void;
 }
 
 type Props = {
@@ -25,6 +28,7 @@ export const AracajuCarrosProvider: React.FC<Props> = ({children}: Props) => {
     const [usuario, setUsuario] = useState<IUsuario>({} as IUsuario);
     const [carros, setCarros] = useState<ICarros[]>([]);
     const [modelos, setModelos] = useState<IModelos[]>([]);
+    const [marcas, setMarcas] = useState<IMarcas[]>([]);
 
     useEffect(() => {
 
@@ -39,10 +43,11 @@ export const AracajuCarrosProvider: React.FC<Props> = ({children}: Props) => {
         logar();
         loadCarros(setCarros);
         loadModelos(setModelos);
+        loadMarcas(setMarcas);
 
     }, []);
 
-    const values = { usuario, setUsuario, carros, setCarros, modelos, setModelos }
+    const values = { usuario, setUsuario, carros, setCarros, modelos, setModelos, marcas, setMarcas }
 
     return (
         <Context.Provider value={values}>
