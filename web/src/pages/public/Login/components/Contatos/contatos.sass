@@ -1,0 +1,20 @@
+@use '../../../../../sass/mixins'
+@use '../../../../../sass/variables'
+
+.informacoes_contatos
+    @include mixins.remover_margens
+    display: flex
+    flex-direction: column
+
+.contatos_telefone, .conta_email_suporte
+    @include mixins.remover_margens
+    @include mixins.center
+    justify-content: start
+    gap: .5em
+    p
+        margin: .2em
+        font-size: .8em
+        color: variables.$cor-4
+    svg
+        color: variables.$cor-4
+    
