@@ -1,9 +1,12 @@
-
+import { AracajuCarrosProvider } from "./context"
+import { RoutesApp } from "./routes"
 
 function App() {
 
   return (
-    <div>ffrfr</div>
+    <AracajuCarrosProvider>
+      <RoutesApp />
+    </AracajuCarrosProvider>
   )
 }
 
