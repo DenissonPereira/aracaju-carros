@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
-import DrawerRoutes from "./drawer.routes";
 import { useAracajuCarrosContext } from "../context";
 import { Login } from "../screens/Login";
+import { TabRoutes } from "./tab.routes";
 
 
 export default function Routes() {
@@ -10,7 +10,7 @@ export default function Routes() {
 
     return (
         <NavigationContainer>
-            {usuario?.id ? <DrawerRoutes /> : <Login />}
+            {usuario?.id ? <TabRoutes /> : <Login />}
         </NavigationContainer>
     )
 }
