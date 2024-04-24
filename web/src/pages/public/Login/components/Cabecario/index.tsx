@@ -1,6 +1,7 @@
 import BemVindo from '../../../../../assets/images/bemvindo.png'
 
 import './cabecario.sass'
+import './cabecarioResponsividade.sass'
 
 export const Cabecario = () => {
   return (
