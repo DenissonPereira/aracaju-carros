@@ -57,7 +57,7 @@ public class UsuariosController {
                 .body("Usuario não encontrado!");
     }
 
-    @DeleteMapping("usuarios/{id}")
+    @DeleteMapping("/usuarios/{id}")
     public ResponseEntity<?> deletarUserById(@PathVariable Long id) {
 
         Optional<Usuarios> optionalUser = usuariosRepository.findById(id);
@@ -74,7 +74,7 @@ public class UsuariosController {
 
     }
 
-    @PutMapping("usuarios/{id}")
+    @PutMapping("/usuarios/{id}")
     public ResponseEntity<?> editUserById(@PathVariable Long id, @RequestBody Usuarios usuarioAtualizado) {
         
         Optional<Usuarios> optionalUser = usuariosRepository.findById(id);
