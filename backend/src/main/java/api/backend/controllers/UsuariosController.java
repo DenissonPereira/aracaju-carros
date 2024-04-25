@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import api.backend.models.Usuarios;
-import api.backend.repository.UsuariosRepository;
+import api.backend.services.UsuariosServices;
 import lombok.AllArgsConstructor;
 
 @RestController
@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 public class UsuariosController {
     
     @Autowired
-    UsuariosRepository usuariosRepository;
+    UsuariosServices usuariosServices;
 
     @PostMapping("/cadastrar")
     public ResponseEntity<?> saveUser(@RequestBody Usuarios usuario) {
@@ -23,6 +23,8 @@ public class UsuariosController {
             return ResponseEntity.badRequest().body("Sem dados!");
         }
 
-        return ResponseEntity.ok(usuariosRepository.save(usuario));
+        Usuarios usuarioSalvo = usuariosServices.cadastrarUsuario(usuario);
+
+        return ResponseEntity.ok(usuarioSalvo);
     }
 }
