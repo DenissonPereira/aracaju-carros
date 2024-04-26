@@ -8,7 +8,11 @@ const Stack = createStackNavigator();
 
 export default function StackRoutes() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={{
+                headerTintColor: 'red'
+            }}
+        >
             <Stack.Screen
                 name="home"
                 component={Home}

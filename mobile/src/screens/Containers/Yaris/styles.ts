@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     view: {
         flex: 1,
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'white'
     },
     titulo: {
         fontSize: 20,
@@ -27,6 +28,8 @@ export const styles = StyleSheet.create({
         height: 30,
         backgroundColor: 'white',
         borderRadius: 50,
+        borderWidth: 1,
+        borderColor: '#C9C9C9'
     },
     prata: {
         width: 30,
