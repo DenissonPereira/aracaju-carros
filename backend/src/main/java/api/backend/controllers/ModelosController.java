@@ -16,6 +16,7 @@ import api.backend.repository.ModelosRepository;
 import api.backend.services.ModelosService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
@@ -64,6 +65,25 @@ public class ModelosController {
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body("Modelo não encontrado!");
+    }
+
+    @PutMapping("/modelos/{id}")
+    public ResponseEntity<?> editModelo(@PathVariable Long id, @RequestBody Modelos modeloAtualizado) {
+        Optional<Modelos> optionalModelo = modelosRepository.findById(id);
+        if (optionalModelo.isPresent()) {
+            Modelos modeloExistente = optionalModelo.get();
+
+            modeloExistente.setId(modeloAtualizado.getId());
+            modeloExistente.setModelo(modeloAtualizado.getModelo());
+
+            Modelos modeloAttSalvo = modelosRepository.save(modeloExistente);
+
+            return ResponseEntity.ok(modeloAttSalvo);
+        }
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body("Erro ao atualizar modelo!");
     }
 
 }

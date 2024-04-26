@@ -54,7 +54,7 @@ public class UsuariosController {
 
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body("Usuario não encontrado!");
+                .body("Usuário não encontrado!");
     }
 
     @DeleteMapping("/usuarios/{id}")
@@ -70,7 +70,7 @@ public class UsuariosController {
 
         return ResponseEntity
             .status((HttpStatus.NOT_FOUND))
-            .body("Usuario não encontrado!");
+            .body("Usuário não encontrado!");
 
     }
 
@@ -99,6 +99,6 @@ public class UsuariosController {
             return ResponseEntity.ok(usuarioAttSave);
         }
 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro ao atualizar usuario!");
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro ao atualizar usuário!");
     }
 }
