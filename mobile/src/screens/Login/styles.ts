@@ -36,6 +36,10 @@ export const styles = StyleSheet.create({
         borderColor: '#E9E9E9',
         padding: 10
     },
+    touch: {
+        padding: 0,
+        margin: 0
+    },
     botao: {
         marginTop: 20,
         backgroundColor: 'red',
