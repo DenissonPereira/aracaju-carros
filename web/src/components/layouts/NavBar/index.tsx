@@ -7,9 +7,12 @@ import { LuLogOut } from "react-icons/lu";
 import { logoutService } from '../../../services/logout';
 
 import './navbar.sass'
+import { useAracajuCarrosContext } from '../../../context';
 
 
 export function NavBar() {
+
+    const { usuario } = useAracajuCarrosContext();
 
     const sair = () => {
         logoutService();
@@ -25,20 +28,24 @@ export function NavBar() {
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                        {usuario.tipo === 'admin' ?
+                            <NavDropdown title="Editar" id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">
+                                    Another action
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">
+                                    Separated link
+                                </NavDropdown.Item>
+                            </NavDropdown> : <Nav.Link href="#link" disabled>Editar</Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
-                <Navbar.Collapse className="justify-content-end">
+                <Navbar.Collapse className="justify-content-end gap-3">
+                    <Navbar.Text>
+                        Olá, {usuario.nome}!
+                    </Navbar.Text>
                     <Button variant="outline-light" className='btn_sair' onClick={sair}>
                         <LuLogOut /> Sair
                     </Button>
