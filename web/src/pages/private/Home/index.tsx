@@ -1,7 +1,11 @@
+import { NavBar } from "../../../components"
 
+import './home.sass'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div className="home_principal">
+      <NavBar />
+    </div>
   )
 }
