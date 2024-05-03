@@ -1,0 +1,48 @@
+@use '../../sass/mixins'
+@use '../../sass/variables'
+
+.home_menu_logo
+  @include mixins.center
+  margin: 2vw
+  svg
+    font-size: 5vw
+  h1
+    overflow-wrap: break-word
+
+
+.icone
+  @include mixins.center
+  gap: 2vh
+  margin: 2vw
+  cursor: pointer
+  svg
+    font-size: 4vw
+  &:hover
+    color: black
+    transition: .5s
+  &:active
+    color: variables.$cor-4
+
+.home_menu_perfil_ola
+  @include mixins.center
+
+.home_menu_perfil_entrar
+  @include mixins.center
+  gap: 2vh
+  img
+    width: 5em
+    height: 5em
+    border-radius: 50%
+    border: 1px solid black
+  button
+    border: none
+    width: 8vw
+    height: 4vw
+    border-radius: .5em
+    cursor: pointer
+    font-size: 1.4vw
+    font-weight: 600
+    &:hover
+      background-color: variables.$cor-2
+    &:active
+      color: variables.$cor-4

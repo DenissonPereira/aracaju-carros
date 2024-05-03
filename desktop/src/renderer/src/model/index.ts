@@ -7,4 +7,5 @@ export interface IUsuario {
   cpf: string
   endereco: string
   email: string
+  foto: string
 }

@@ -1,12 +1,13 @@
-import { useAracajuCarrosContext } from "@renderer/context";
-import { loginService } from "@renderer/services/auth/login";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaUser, FaEyeSlash } from "react-icons/fa";
-import { IoEyeSharp } from "react-icons/io5";
+import { useAracajuCarrosContext } from '@renderer/context'
+import { loginService } from '@renderer/services/auth/login'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { FaUser, FaEyeSlash } from 'react-icons/fa'
+import { IoEyeSharp } from 'react-icons/io5'
+
+import './formulario.sass'
 
 export function FormularioLogin(): JSX.Element {
-
   const navigate = useNavigate()
 
   const [email, setEmail] = useState<string>('')
@@ -50,7 +51,7 @@ export function FormularioLogin(): JSX.Element {
             placeholder="E-mail"
             id="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="input_login"
             required
           />
@@ -64,7 +65,7 @@ export function FormularioLogin(): JSX.Element {
             placeholder="Senha"
             id="senha"
             value={senha}
-            onChange={e => setSenha(e.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
             className="input_login"
             required
           />

@@ -1,3 +1,13 @@
+import { Menu } from '@renderer/components'
+import './home.sass'
+
 export function Home(): JSX.Element {
-  return <div>homessss</div>
+  return (
+    <div className="home_principal">
+      <div className="home_menu">
+        <Menu />
+      </div>
+      <div>home</div>
+    </div>
+  )
 }
