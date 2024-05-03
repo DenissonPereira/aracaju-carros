@@ -1,4 +1,4 @@
-import { AracajuCarrosProvider } from './context'
+import { AracajuCarrosProvider } from './provider'
 import { RoutesApp } from './routes'
 
 function App(): JSX.Element {
