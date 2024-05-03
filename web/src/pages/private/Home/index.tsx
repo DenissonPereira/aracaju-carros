@@ -1,6 +1,7 @@
 import { NavBar } from "../../../components"
 
 import './home.sass'
+import './homeResponsividade.sass'
 
 export const Home = () => {
   return (
