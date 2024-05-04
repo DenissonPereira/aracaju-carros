@@ -1,7 +1,6 @@
 import { IUsuario } from '@renderer/model'
 import { connectServer } from '../connection'
-
-const DBSTORE = '@AracajuCarros:CarrosBG'
+import { DBSTORE } from '@renderer/config/bdstore'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export async function loginService(

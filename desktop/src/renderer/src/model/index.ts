@@ -8,4 +8,5 @@ export interface IUsuario {
   endereco: string
   email: string
   foto: string
+  sobrenome: string
 }

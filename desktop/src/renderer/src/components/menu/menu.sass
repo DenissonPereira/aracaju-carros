@@ -16,22 +16,24 @@
   margin: 2vw
   cursor: pointer
   svg
-    font-size: 4vw
+    font-size: 3vw
   &:hover
-    color: black
+    color: variables.$cor-1
     transition: .5s
   &:active
     color: variables.$cor-4
 
 .home_menu_perfil_ola
   @include mixins.center
+  margin-top: 5vw
+  font-size: .5em
 
 .home_menu_perfil_entrar
   @include mixins.center
   gap: 2vh
   img
-    width: 5em
-    height: 5em
+    width: 4em
+    height: 4em
     border-radius: 50%
     border: 1px solid black
   button
@@ -40,9 +42,11 @@
     height: 4vw
     border-radius: .5em
     cursor: pointer
-    font-size: 1.4vw
+    font-size: 1.3vw
     font-weight: 600
     &:hover
-      background-color: variables.$cor-2
+      background-color: variables.$cor-1
+      color: white
+      transition: .5s
     &:active
       color: variables.$cor-4

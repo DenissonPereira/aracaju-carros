@@ -1,4 +1,5 @@
 import { Menu } from '@renderer/components'
+
 import './home.sass'
 
 export function Home(): JSX.Element {
@@ -7,7 +8,7 @@ export function Home(): JSX.Element {
       <div className="home_menu">
         <Menu />
       </div>
-      <div>home</div>
+      <div className="home_direito">home</div>
     </div>
   )
 }
