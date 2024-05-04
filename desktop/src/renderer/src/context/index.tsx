@@ -1,9 +1,15 @@
 import { createContext, useContext } from 'react'
-import { IUsuario } from '@renderer/model'
+import { ICarros, IMarcas, IModelos, IUsuario } from '@renderer/model'
 
 type CarroProps = {
+  carros: ICarros[]
+  setCarros(carros: ICarros[]): void
+  modelos: IModelos[]
+  setModelos(modelos: IModelos[]): void
   usuario: IUsuario
   setUsuario(usuario: IUsuario): void
+  marcas: IMarcas[]
+  setMarcas(marcas: IMarcas[]): void
 }
 
 const Context = createContext<CarroProps>({} as CarroProps)

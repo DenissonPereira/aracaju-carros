@@ -1,0 +1,50 @@
+@use '../../sass/mixins'
+@use '../../sass/variables'
+
+.mostrar_carros_por_tipos
+  @include mixins.flex
+  gap: 3vw
+  button
+    cursor: pointer
+
+.btn_geral
+  width: 10vw
+  height: 4vw
+  border: none
+  border-radius: .4em
+  color: black
+  font-weight: 600
+  font-size: 1.2vw
+  &:hover
+    transition: .5s
+    background-color: variables.$cor-1
+    color: variables.$cor-3
+  &:active
+    background-color: variables.$cor-4
+
+.btn_selecionado
+  background-color: red
+  width: 10vw
+  height: 4vw
+  border: none
+  border-radius: .4em
+  color: white
+  font-weight: 600
+  font-size: 1.2vw
+
+.mostrar_carros_da_categoria
+  margin-top: 5vw
+
+.mostrar_carros_completo
+  @include mixins.center
+  color: white
+  font-size: 2vw
+  font-weight: 600
+  img
+    width: 30vw
+
+.temEstoque
+  color: #09ff00
+
+.naoTemEstoque
+  color: #a6ff00
