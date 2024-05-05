@@ -19,7 +19,7 @@ export function Perfil(): JSX.Element {
       <div className="home_menu">
         <Menu />
       </div>
-      <div className="home_direito">
+      <div className="perfil_direito">
         <div className="perfil_cabecario">
           <div className="perfil_com_imagem">
             <img src={usuario.foto} alt="foto" />

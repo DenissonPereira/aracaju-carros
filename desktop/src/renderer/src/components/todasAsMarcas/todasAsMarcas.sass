@@ -1,0 +1,34 @@
+@use '../../sass/mixins'
+@use '../../sass/variables'
+
+.todas_as_marcas_h1
+  margin-bottom: 5vw
+
+.todas_as_marcas_grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  gap: 20px
+
+.todas_as_marcas_grid_unica
+  img
+    width: 12vw
+
+.todas_as_marcas_quantidade
+  @include mixins.center
+  gap: 1vw
+  span
+    @include mixins.remover_margens
+  h3
+    @include mixins.remover_margens
+
+.todas_as_marcas_grid_unica
+  @include mixins.center
+  flex-direction: column
+  background-color: #00000052
+  border-radius: .5vw
+
+.semCarros
+  color: variables.$cor-1
+
+.temCarros
+  color: #09ff00

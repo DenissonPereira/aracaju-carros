@@ -8,7 +8,7 @@ export function Discover(): JSX.Element {
       <div className="home_menu">
         <Menu />
       </div>
-      <div className="home_direito">
+      <div className="discover_direito">
         <MostrarCarrosPrincipal />
       </div>
     </div>
