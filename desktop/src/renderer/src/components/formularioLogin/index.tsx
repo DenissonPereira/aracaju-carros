@@ -4,29 +4,19 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaUser, FaEyeSlash } from 'react-icons/fa'
 import { IoEyeSharp } from 'react-icons/io5'
+import { UseMostrarSenha } from '@renderer/hooks'
 
 import './formulario.sass'
 
 export function FormularioLogin(): JSX.Element {
   const navigate = useNavigate()
 
+  const { mudarVisibilidade, visivel, tipo } = UseMostrarSenha()
+
   const [email, setEmail] = useState<string>('')
   const [senha, setSenha] = useState<string>('')
-  const [tipo, setTipo] = useState<string>('password')
-  const [visivel, setVisivel] = useState<boolean>(false)
 
   const { setUsuario } = useAracajuCarrosContext()
-
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const mudarVisibilidade = () => {
-    if (visivel === false) {
-      setVisivel(true)
-      setTipo('text')
-    } else {
-      setVisivel(false)
-      setTipo('password')
-    }
-  }
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   async function handleLogin() {
