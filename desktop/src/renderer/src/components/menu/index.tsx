@@ -31,12 +31,12 @@ export function Menu(): JSX.Element {
           <p>Marcas</p>
         </div>
         {usuario.tipo === 'admin' && (
-          <div className="icone">
+          <div className="icone" onClick={() => navigate('/updates')}>
             <MdBrowserUpdated />
             <p>Updates</p>
           </div>
         )}
-        <div className="icone">
+        <div className="icone" onClick={() => navigate('/develop')}>
           <FaHammer />
           <p>Develop</p>
         </div>
