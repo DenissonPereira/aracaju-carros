@@ -1,19 +1,11 @@
 import { useAracajuCarrosContext } from '@renderer/context'
 import './mostrarCarros.sass'
-import { useState } from 'react'
-import { IModelos } from '@renderer/model'
+import { UseMostrarCarros } from '@renderer/hooks'
 
 export function MostrarCarrosPrincipal(): JSX.Element {
-  const { modelos, carros } = useAracajuCarrosContext()
-  const [selectedItem, setSelectedItem] = useState<IModelos | number>(1)
-  const [numero, setNumero] = useState<number>(1)
-  const carrosFiltrados = carros.filter((carro) => carro.tipo == `${numero}`)
+  const { modelos } = useAracajuCarrosContext()
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const mudarNumero = (item: IModelos) => {
-    setSelectedItem(item)
-    setNumero(item.id)
-  }
+  const { mudarNumero, carrosFiltrados, selectedItem, numero } = UseMostrarCarros()
 
   return (
     <div className="mostrar_Carros_principal">

@@ -4,36 +4,32 @@ import { IoCarSport } from 'react-icons/io5'
 import { FaHammer } from 'react-icons/fa6'
 import { useAracajuCarrosContext } from '@renderer/context'
 import Logo from '../../assets/images/logo_carros.png'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import './menu.sass'
 
 export function Menu(): JSX.Element {
+  const navigate = useNavigate()
   const { usuario } = useAracajuCarrosContext()
+
   return (
     <div>
       <div className="home_menu_logo">
         <img src={Logo} alt="logo" />
       </div>
       <div className="home_menu_icones">
-        <Link to="/home">
-          <div className="icone">
-            <FaHome />
-            <p>Home</p>
-          </div>
-        </Link>
-        <Link to="/discover" className="links">
-          <div className="icone">
-            <FaStar />
-            <p>Discover</p>
-          </div>
-        </Link>
-        <Link to="/marcas">
-          <div className="icone">
-            <IoCarSport />
-            <p>Marcas</p>
-          </div>
-        </Link>
+        <div className="icone" onClick={() => navigate('/home')}>
+          <FaHome />
+          <p>Home</p>
+        </div>
+        <div className="icone" onClick={() => navigate('/discover')}>
+          <FaStar />
+          <p>Discover</p>
+        </div>
+        <div className="icone" onClick={() => navigate('/marcas')}>
+          <IoCarSport />
+          <p>Marcas</p>
+        </div>
         {usuario.tipo === 'admin' && (
           <div className="icone">
             <MdBrowserUpdated />
@@ -51,9 +47,7 @@ export function Menu(): JSX.Element {
         </div>
         <div className="home_menu_perfil_entrar">
           <img src={usuario.foto} alt="foto_perfil" />
-          <Link to="/perfil">
-            <button>Ver perfil</button>
-          </Link>
+          <button onClick={() => navigate('/perfil')}>Ver perfil</button>
         </div>
       </div>
     </div>
