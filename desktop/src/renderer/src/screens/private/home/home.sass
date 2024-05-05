@@ -5,6 +5,16 @@ body
   background-image: url('../../../assets/images/back.png')
   background-position: center
 
+body::before
+  z-index: -1
+  content: ""
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(0, 0, 0, 0.137)
+
 .home_principal
   display: flex
   color: white
@@ -21,3 +31,8 @@ body
   width: 100%
   @include mixins.center
   color: black
+
+.home_image_direita
+  background-color: #ffffff2d
+  padding: 4vw
+  border-radius: 1vw

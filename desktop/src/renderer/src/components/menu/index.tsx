@@ -28,10 +28,12 @@ export function Menu(): JSX.Element {
             <p>Discover</p>
           </div>
         </Link>
-        <div className="icone">
-          <IoCarSport />
-          <p>Marcas</p>
-        </div>
+        <Link to="/marcas">
+          <div className="icone">
+            <IoCarSport />
+            <p>Marcas</p>
+          </div>
+        </Link>
         {usuario.tipo === 'admin' && (
           <div className="icone">
             <MdBrowserUpdated />

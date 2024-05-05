@@ -1,6 +1,12 @@
 @use '../../sass/mixins'
 @use '../../sass/variables'
 
+body
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
 .home_menu_logo
   @include mixins.center
   margin: 2vw
