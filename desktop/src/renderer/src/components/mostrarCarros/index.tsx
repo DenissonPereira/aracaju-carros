@@ -1,6 +1,7 @@
 import { useAracajuCarrosContext } from '@renderer/context'
 import './mostrarCarros.sass'
 import { UseMostrarCarros } from '@renderer/hooks'
+import { formatarNumero } from '@renderer/utils'
 
 export function MostrarCarrosPrincipal(): JSX.Element {
   const { modelos } = useAracajuCarrosContext()
@@ -27,6 +28,7 @@ export function MostrarCarrosPrincipal(): JSX.Element {
             <img src={item.imagem1} alt={item.modelo} />
             <div className="mostrar_carros_descricao">
               <p>{item.modelo}</p>
+              <p>Valor: {formatarNumero(item.preco)}</p>
               <p className={item.disponibilidade === 'Em estoque' ? 'temEstoque' : 'naoTemEstoque'}>
                 {item.disponibilidade}
               </p>

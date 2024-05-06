@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { FaUser, FaEyeSlash } from 'react-icons/fa'
 import { IoEyeSharp } from 'react-icons/io5'
 import { UseMostrarSenha } from '@renderer/hooks'
+import { validateEmail } from '@renderer/utils/validation'
+import { valirdateSenha } from '@renderer/utils/validation'
 
 import './formulario.sass'
 
@@ -21,6 +23,12 @@ export function FormularioLogin(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   async function handleLogin() {
     event?.preventDefault()
+    if (!validateEmail(email)) {
+      alert('Por favor, insira um email válido!')
+    }
+    if (!valirdateSenha(senha)) {
+      alert('Senha não está completa!')
+    }
     const data = await loginService(email, senha, setUsuario)
     console.log(data)
 
