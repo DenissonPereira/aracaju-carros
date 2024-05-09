@@ -1,7 +1,6 @@
-import { connectServer } from '.';
-import { IUsuario } from '../model';
-
-const DBSTORE = '@AracajuCarros:CarrosBG';
+import { connectServer } from '..';
+import { DBSTORE } from '../../config';
+import { IUsuario } from '../../model';
 
 export async function loginService(email: string, senha: string, setUsuario: (usuario: IUsuario) => void ) {
     try {

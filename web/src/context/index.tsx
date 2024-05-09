@@ -1,46 +1,23 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { IUsuario } from "../model"
-
+import { createContext, useContext } from 'react'
+import { ICarros, IMarcas, IModelos, IUsuario } from '../model'
 
 type CarroProps = {
-    usuario: IUsuario;
-    setUsuario(usuario: IUsuario): void;
+  carros: ICarros[]
+  setCarros(carros: ICarros[]): void
+  modelos: IModelos[]
+  setModelos(modelos: IModelos[]): void
+  usuario: IUsuario
+  setUsuario(usuario: IUsuario): void
+  marcas: IMarcas[]
+  setMarcas(marcas: IMarcas[]): void
 }
 
-type Props = {
-    children: React.ReactNode;
-}
+const Context = createContext<CarroProps>({} as CarroProps)
 
-const DBSTORE = '@AracajuCarros:CarrosBG';
-const Context = createContext<CarroProps>({} as CarroProps);
-
-export const AracajuCarrosProvider: React.FC<Props> = ({children}: Props) => {
-    const [usuario, setUsuario] = useState<IUsuario>({} as IUsuario);
-
-    useEffect(() => {
-
-        async function logar() {
-            const usuarioDB = await localStorage.getItem(DBSTORE);
-            const usuario: IUsuario =  usuarioDB ? await JSON.parse(usuarioDB) : undefined;
-            if(usuario?.id) {
-              setUsuario(usuario);
-              return;
-            }
-        }
-        logar();
-
-    }, []);
-
-    const values = { usuario, setUsuario }
-
-    return (
-        <Context.Provider value={values}>
-            {children}
-        </Context.Provider>
-    );
-}
-
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAracajuCarrosContext = () => {
-    const carrosConstante = useContext(Context);
-    return carrosConstante;
+  const carrosConstante = useContext(Context)
+  return carrosConstante
 }
+
+export default Context

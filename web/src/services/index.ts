@@ -1,7 +1,3 @@
-import axios from "axios";
-
-const BASE_URL = 'http://127.0.0.1:3000';
-
-export const connectServer = axios.create({
-    baseURL: BASE_URL,
-})
+export * from './auth'
+export * from './common'
+export * from './connection'

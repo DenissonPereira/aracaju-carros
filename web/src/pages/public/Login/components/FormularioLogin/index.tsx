@@ -3,7 +3,7 @@ import { FaUser, FaEyeSlash } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
 
 import './formularioLogin.sass'
-import { loginService } from "../../../../../services/login";
+import { loginService } from "../../../../../services/auth/login";
 import { useNavigate } from "react-router-dom";
 import { useAracajuCarrosContext } from "../../../../../context";
 

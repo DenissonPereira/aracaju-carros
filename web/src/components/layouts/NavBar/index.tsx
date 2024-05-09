@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import { LuLogOut } from "react-icons/lu";
-import { logoutService } from '../../../services/logout';
+import { logoutService } from '../../../services/auth/logout';
 
 import './navbar.sass'
 import { useAracajuCarrosContext } from '../../../context';

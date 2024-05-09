@@ -1,5 +1,4 @@
-
-const DBSTORE = '@AracajuCarros:CarrosBG';
+import { DBSTORE } from "../../config";
 
 export async function logoutService() {
     try {
