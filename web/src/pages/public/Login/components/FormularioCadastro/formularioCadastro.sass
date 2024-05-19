@@ -26,3 +26,43 @@
         border: none
         outline: none
         font-size: 2vh
+
+.btn_cadastrar_formulario
+    width: 37vh
+    height: 6vh
+    background-color: variables.$cor-1
+    border: none
+    color: white
+    font-size: 2vh
+    font-weight: 500
+    border-radius: .5em
+    cursor: pointer
+    &:hover
+        background-color: #a82a2a
+
+.forca_senha_cadastro
+    height: 10px
+    width: 100%
+    background-color: #e0e0e0
+    border-radius: 4px
+    margin-bottom: 10px
+    overflow: hidden
+
+.indicador_senha
+    height: 100%
+    transition: width 0.3s
+
+.indicador_senha.fazia
+    width: 0%
+
+.indicador_senha.fraca
+    width: 33%
+    background-color: red
+
+.indicador_senha.media
+    width: 66%
+    background-color: orange
+
+.indicador_senha.forte
+    width: 100%
+    background-color: green

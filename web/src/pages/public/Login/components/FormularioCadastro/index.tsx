@@ -15,6 +15,17 @@ export const FormularioCadastro = () => {
 
   const [mostrarSenha, setMostrarSenha] = useState<boolean>(false)
 
+  const forcaDaSenha = (senha: string) => {
+    const tamanho = senha.length
+
+    if (tamanho > 10) return 'forte'
+    if (tamanho >= 5) return 'media'
+    if (tamanho > 0) return 'fraca'
+    return 'fazia'
+  }
+
+  const forca = forcaDaSenha(senha)
+
   const verSenha = () => {
     if (mostrarSenha === false) {
       setMostrarSenha(true)
@@ -97,6 +108,9 @@ export const FormularioCadastro = () => {
             required
           />
         </div>
+        <div className="forca_senha_cadastro">
+          <div className={`indicador_senha ${forca}`}></div>
+        </div>
         <div className="cadastro">
           <FcPhone />
           <input
@@ -133,6 +147,7 @@ export const FormularioCadastro = () => {
           />
           <p>Ao informar seus dados e seguir para a próxima etapa, você automaticamente concorda com nossa <a href="">Política de Privacidade</a> e com os <a href="">Termos de Uso</a>.</p>
         </div>
+        <button type="submit" className="btn_cadastrar_formulario">CADASTRAR</button>
       </form>
     </div>
   )
