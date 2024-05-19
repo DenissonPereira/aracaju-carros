@@ -1,0 +1,1 @@
+export const api_erro: string = 'Erro ao chamar API: '

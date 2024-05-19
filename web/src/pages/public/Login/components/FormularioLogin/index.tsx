@@ -69,16 +69,6 @@ export const FormularioLogin = () => {
             required
           />
         </div>
-        <div className="formulario_login_senha_checkbox">
-          <input 
-            type="checkbox" 
-            name="check"
-            id="checkbox"
-            className="checkbox_login"
-            required
-          />
-          <p>Ao informar seus dados e seguir para a próxima etapa, você automaticamente concorda com nossa <a href="">Política de Privacidade</a> e com os <a href="">Termos de Uso</a>.</p>
-        </div>
         <button type="submit">Entrar</button>
       </form>
     </div>

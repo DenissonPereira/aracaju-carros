@@ -1,5 +1,6 @@
 import { ICarros } from "../../model"
 import { connectServer } from ".."
+import { api_erro } from "../../core"
 
 export async function carrosService(setCarros: (carros: ICarros[]) => void) {
     try {
@@ -9,7 +10,7 @@ export async function carrosService(setCarros: (carros: ICarros[]) => void) {
             return data.carros
         }
     } catch (error) {
-        console.log('Erro ao chamar API: ', error)
+        console.log(api_erro, error)
         return error
     }
 }

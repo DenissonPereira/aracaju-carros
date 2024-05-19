@@ -1,3 +1,5 @@
 export * from './FormularioLogin'
 export * from './Cabecario'
 export * from './Contatos'
+export * from './CabecarioCadastro'
+export * from './FormularioCadastro'
